@@ -7,13 +7,13 @@
   border: 0;
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   font-size: $fontSize;
   font-family: $fontFamily;
   font-weight: 400;
-
 }
 .wrapper {
   max-width: 1440px;
@@ -21,185 +21,175 @@ html, body {
   overflow: hidden;
 }
 .header {
-  
   background-color: $headerBgColor;
   border-bottom: 1px solid $borderColor;
-  
-  &__container 
-    {
-  //padding-left: 52px;
-  //padding-right: 52px;
-  max-width: 1336px;
-  margin: 0 52px;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  height: 80px;
-  @media screen and (max-width: 500px){
-    margin: 0 30px;
-  }
+
+  &__container {
+    //padding-left: 52px;
+    //padding-right: 52px;
+    max-width: 1336px;
+    margin: 0 52px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    height: 80px;
+    @media screen and (max-width: 500px) {
+      margin: 0 30px;
     }
-    &__logo {
-      //display: flex;
-      //justify-content: flex-start;
-  margin-right: auto;
+  }
+  &__logo {
+    //display: flex;
+    //justify-content: flex-start;
+    margin-right: auto;
   }
 }
 
 .menu {
   margin-left: auto;
- 
-  &__list{
+
+  &__list {
     display: flex;
     gap: 31px;
     justify-content: center;
     align-items: center;
     list-style: none;
   }
- 
-    &__link {
-      text-decoration: none;
-    }
-      img {
-    padding-left: 4px;
-    }
-      &__link:hover {
-      color: red;
-       
-     }
-         
-    &__item {
-    display: flex;
-    }
-      &__item_four{
-      margin-right: 8px;
-    }
-      &__item_five{
-      align-items: center;
-      padding-left: 33px;
-      border-left: 1px solid $borderColor;
-      height: 79px;
-    }
-    
+
+  &__link {
+    text-decoration: none;
   }
-@media screen and (max-width: 943px) {
-.menu__item_six {
-  display: none;
+  img {
+    padding-left: 4px;
+  }
+  &__link:hover {
+    color: red;
+  }
+
+  &__item {
+    display: flex;
+  }
+  &__item_four {
+    margin-right: 8px;
+  }
+  &__item_five {
+    align-items: center;
+    padding-left: 33px;
+    border-left: 1px solid $borderColor;
+    height: 79px;
+  }
 }
+@media screen and (max-width: 943px) {
+  .menu__item_six {
+    display: none;
+  }
 }
 
 .page {
-  
-  background-color: #EFEEE8;
+  background-color: #efeee8;
 }
 .page__container {
-  background-color: #EFEEE8;
+  background-color: #efeee8;
   padding: 80px 0;
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 600px) {
     padding: 40px 0;
-
   }
-  @media screen and (max-width: 500px){
-    padding-bottom: 5px ;
+  @media screen and (max-width: 500px) {
+    padding-bottom: 5px;
   }
 }
 .text {
-  
   max-width: 890px;
   height: 362px;
   margin: 0 auto;
   text-align: center;
-  
+
   &__text {
     @include biggestFont;
     margin-top: 13px;
     margin-bottom: 29px;
     @media screen and (max-width: 768px) {
-    font-size: 50px;
-  }
-    @media screen and (max-width: 596px){
-    font-size: 42px;
-  }
-    @media screen and (max-width: 500px){
+      font-size: 50px;
+    }
+    @media screen and (max-width: 596px) {
+      font-size: 42px;
+    }
+    @media screen and (max-width: 500px) {
       font-size: 35px;
     }
-    @media screen and (max-width: 420px){
+    @media screen and (max-width: 420px) {
       font-size: 30px;
     }
-    @media screen and (max-width: 358px){
+    @media screen and (max-width: 358px) {
       font-size: 25px;
     }
-
-}
+  }
   &__description {
-  font-size: 22px;
-  max-width: 884px;
-  margin-bottom: 56px;
-  @media screen and (max-width: 600px){
+    font-size: 22px;
+    max-width: 884px;
+    margin-bottom: 56px;
+    @media screen and (max-width: 600px) {
       font-size: 20px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 466px) {
+      font-size: 15px;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
   }
-  @media screen and (max-width: 500px){
-    font-size: 16px;
-    margin-bottom: 40px;
-  }
-  @media screen and (max-width: 466px){
-    font-size: 15px;
-  }
-  @media screen and (max-width: 380px){
-    font-size: 14px;
-    margin-bottom: 35px;
-  }
-}
 
   &__explorer {
-  
-  color:#EFEEE8;
-  background-color: $borderColor;
-  text-decoration: none;
-  max-width: 242px;
-  //height: 64px;
-  padding: 21px 24px;
+    color: #efeee8;
+    background-color: $borderColor;
+    text-decoration: none;
+    max-width: 242px;
+    //height: 64px;
+    padding: 21px 24px;
     &::after {
-      content: ' \2192';
+      content: " \2192";
       padding-left: 35px;
-    } 
+    }
     &:hover {
-      background-color: #EFEEE8;
+      background-color: #efeee8;
       color: $borderColor;
       border: 1px solid $borderColor;
     }
-  @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
       padding: 16px 19px;
       font-size: 16px;
     }
-  @media screen and (max-width: 532px){
+    @media screen and (max-width: 532px) {
       padding: 13px 16px;
       font-size: 15px;
-    } 
-  @media screen and (max-width: 465px){
+    }
+    @media screen and (max-width: 465px) {
       padding: 10px 13px;
       font-size: 14px;
     }
-  @media screen and (max-width: 420px){
+    @media screen and (max-width: 420px) {
       padding: 9px 12px;
       font-size: 13px;
     }
-  }  
   }
+}
 .page__image {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
-  
+
   img {
     max-width: 100%;
-    
-    @media screen and (max-width:768px) {
+
+    @media screen and (max-width: 768px) {
       padding: 0;
       margin-top: 0px;
     }
-    
   }
 }
 
@@ -207,124 +197,111 @@ html, body {
 
 .page__about {
   padding: 100px;
-  background-color: #EFEEE8;
-  @media screen and (max-width: 917px){
+  background-color: #efeee8;
+  @media screen and (max-width: 917px) {
     padding: 50px 20px;
   }
 }
 .header-about {
   display: flex;
   padding-top: 21px;
- &__image {
-  flex: 0 0 50%;
-  position: relative;
-  min-height: 200px;  
-  @media screen and (max-width: 957px){
-  flex: 0 0 33.333%;
-}
-  img {
-    object-fit: cover;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    
-}
-}
+  &__image {
+    flex: 0 0 50%;
+    position: relative;
+    min-height: 200px;
+    @media screen and (max-width: 957px) {
+      flex: 0 0 33.333%;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
   &__text {
-  margin-left: 54px;
-  padding: 58px 0 0 48px;
-  @media screen and (max-width: 1030px){
-    margin-left: 20px;
+    margin-left: 54px;
+    padding: 58px 0 0 48px;
+    @media screen and (max-width: 1030px) {
+      margin-left: 20px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-left: 5px;
+    }
   }
-  @media screen and (max-width: 768px){
-    margin-left: 5px;
-  }
-}
 }
 .text-block {
-
   &__one {
-    h1 {
+    h2 {
       padding-bottom: 28px;
       @include bigFont;
+    }
   }
-}
+
   &__two {
     margin-top: 51px;
-}
+  }
 }
 
 .block-two {
   display: block;
 
   &__header {
-font-size: 14px;
-font-weight: 700;
-margin-bottom: 15px;
-}
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
   &__body {
     display: block;
     max-width: 507px;
-   font-size: 16px;
-    
-}
-&__first {
-    
+    font-size: 16px;
+  }
+  &__first {
     padding: 16px 0;
 
-  border-bottom: 1px solid $borderColor;
-}
-&__second {
-  padding: 19px 0 13px 0;
-  border-bottom: 1px solid $borderColor;
-}
-&__third {
-  padding: 19px 0 13px 0;
-  border-bottom: 1px solid $borderColor;
-}
-&__four {
-  padding: 19px 0 13px 0;
-  border-bottom: 1px solid $borderColor;
-}
-&__five {
-  padding: 16px 0;
-  border-bottom: 1px solid $borderColor;
-}
+    border-bottom: 1px solid $borderColor;
+  }
+  &__second {
+    padding: 19px 0 13px 0;
+    border-bottom: 1px solid $borderColor;
+  }
+  &__third {
+    padding: 19px 0 13px 0;
+    border-bottom: 1px solid $borderColor;
+  }
+  &__four {
+    padding: 19px 0 13px 0;
+    border-bottom: 1px solid $borderColor;
+  }
+  &__five {
+    padding: 16px 0;
+    border-bottom: 1px solid $borderColor;
+  }
 }
 
 .header-about__button {
-
   margin-top: 62px;
   font-size: 16px;
   padding: 14px 24px;
   background-color: $borderColor;
   cursor: pointer;
-    a {
-    color:#EFEEE8;
+  a {
+    color: #efeee8;
     text-decoration: none;
-  
-       &::after {
-    content: ' \2192';
-    padding-left: 35px;
-    color: #EFEEE8;   
-  } 
-}
-     &:hover {
-      background-color: red;
+
+    &::after {
+      content: " \2192";
+      padding-left: 35px;
+      color: #efeee8;
     }
+  }
+  &:hover {
+    background-color: red;
+  }
 }
 
-  //&__vector {
-    //content: '\2192';
-  //}
-
-
-
-
-
-
-
-
-
+//&__vector {
+//content: '\2192';
+//}
