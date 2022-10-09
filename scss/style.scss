@@ -43,12 +43,12 @@ html, body {
       //display: flex;
       //justify-content: flex-start;
   margin-right: auto;
-  
+  }
 }
-}
+
 .menu {
   margin-left: auto;
-
+ 
   &__list{
     display: flex;
     gap: 31px;
@@ -89,6 +89,8 @@ html, body {
 }
 
 .page {
+  
+  background-color: #EFEEE8;
 }
 .page__container {
   background-color: #EFEEE8;
@@ -98,13 +100,13 @@ html, body {
 
   }
   @media screen and (max-width: 500px){
-    padding-bottom: 5px;
+    padding-bottom: 5px ;
   }
 }
 .text {
   
   max-width: 890px;
-  min-height: 362px;
+  height: 362px;
   margin: 0 auto;
   text-align: center;
   
@@ -161,6 +163,11 @@ html, body {
       content: ' \2192';
       padding-left: 35px;
     } 
+    &:hover {
+      background-color: #EFEEE8;
+      color: $borderColor;
+      border: 1px solid $borderColor;
+    }
   @media screen and (max-width: 600px){
       padding: 16px 19px;
       font-size: 16px;
@@ -179,11 +186,135 @@ html, body {
     }
   }  
   }
-.page__section {
-  background-color: $borderColor;
-  padding: 0 100px;
+.page__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  
+  img {
+    max-width: 100%;
+    
+    @media screen and (max-width:768px) {
+      padding: 0;
+      margin-top: 0px;
+    }
+    
+  }
 }
 
+//body block
+
+.page__about {
+  padding: 100px;
+  background-color: #EFEEE8;
+  @media screen and (max-width: 917px){
+    padding: 50px 20px;
+  }
+}
+.header-about {
+  display: flex;
+  padding-top: 21px;
+ &__image {
+  flex: 0 0 50%;
+  position: relative;
+  min-height: 200px;  
+  @media screen and (max-width: 957px){
+  flex: 0 0 33.333%;
+}
+  img {
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    
+}
+}
+  &__text {
+  margin-left: 54px;
+  padding: 58px 0 0 48px;
+  @media screen and (max-width: 1030px){
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 768px){
+    margin-left: 5px;
+  }
+}
+}
+.text-block {
+
+  &__one {
+    h1 {
+      padding-bottom: 28px;
+      @include bigFont;
+  }
+}
+  &__two {
+    margin-top: 51px;
+}
+}
+
+.block-two {
+  display: block;
+
+  &__header {
+font-size: 14px;
+font-weight: 700;
+margin-bottom: 15px;
+}
+  &__body {
+    display: block;
+    max-width: 507px;
+   font-size: 16px;
+    
+}
+&__first {
+    
+    padding: 16px 0;
+
+  border-bottom: 1px solid $borderColor;
+}
+&__second {
+  padding: 19px 0 13px 0;
+  border-bottom: 1px solid $borderColor;
+}
+&__third {
+  padding: 19px 0 13px 0;
+  border-bottom: 1px solid $borderColor;
+}
+&__four {
+  padding: 19px 0 13px 0;
+  border-bottom: 1px solid $borderColor;
+}
+&__five {
+  padding: 16px 0;
+  border-bottom: 1px solid $borderColor;
+}
+}
+
+.header-about__button {
+
+  margin-top: 62px;
+  font-size: 16px;
+  padding: 14px 24px;
+  background-color: $borderColor;
+  cursor: pointer;
+    a {
+    color:#EFEEE8;
+    text-decoration: none;
+  
+       &::after {
+    content: ' \2192';
+    padding-left: 35px;
+    color: #EFEEE8;   
+  } 
+}
+     &:hover {
+      background-color: red;
+    }
+}
 
   //&__vector {
     //content: '\2192';
