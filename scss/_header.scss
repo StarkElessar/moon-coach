@@ -16,8 +16,8 @@
     align-items: center;
     
     height: 80px;
-    //@media screen and (max-width: 500px) {
-      //margin: 0 30px;
+    //@media  (max-width: 1370px) {
+      //max-width: ;
     //}
   }
   &__logo {
@@ -33,7 +33,7 @@
   &__list {
     display: flex;
     gap: 31px;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     list-style: none;
     @media (max-width: 1024.98px) {

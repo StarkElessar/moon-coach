@@ -16,6 +16,7 @@ body {
   font-size: $fontSize;
   font-family: $fontFamily;
   font-weight: 400;
+  //background-color: $headerBgColor;
 }
 
 .wrapper {
@@ -23,12 +24,15 @@ body {
   height: 100%;
   background-color: $headerBgColor;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 [class*="__container"] {
   max-width: 1270px;
+
   margin: 0 auto;
   padding: 0 15px;
+  
 }
 
 .page {
@@ -163,6 +167,10 @@ body {
     @media screen and (max-width: 957px) {
       flex: 0 0 33.333%;
     }
+    //@media screen and (max-width: 630px) {
+      //display: none;
+    //}
+    
     img {
       object-fit: cover;
       width: 100%;
@@ -170,6 +178,7 @@ body {
       top: 0;
       left: 0;
       height: 100%;
+      
     }
   }
   &__text {
@@ -271,8 +280,11 @@ body {
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(51, 51, 51, 0.1);
     display: flex;
-    justify-content: space-between;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    //justify-content: space-between;
     font-size: 16px;
+    //max-width: 1240px;
   }
   .last {
     border-bottom: none;
@@ -284,6 +296,7 @@ body {
     max-width: 392px;
     min-height: 358px;
     padding: 24px 24px 30px 24px;
+    //display: flex;
   }
 
   &__image {
@@ -371,7 +384,7 @@ body {
     list-style: none;
     padding: 15px 0 0 0px;
     border-bottom: 1px solid rgba(51, 51, 51, 0.8);
-    font-family: 'Libre Baskerville', sans-serif;
+    font-family: "Libre Baskerville", sans-serif;
     font-size: 16px;
     line-height: 21.28px;
   }
@@ -380,24 +393,26 @@ body {
     height: 55px;
     padding-left: 34px;
     background-color: #efeee8;
-    
   }
-  .button {
+  button {
     background-color: #333333;
     height: 52px;
     width: 440px;
-    color:#efeee8;
+    color: #efeee8;
     padding: 15px 164px;
     margin-top: 40px;
     cursor: pointer;
-    button {
-    font-family: 'Libre Baskerville', sans-serif;
+
+    font-family: "Libre Baskerville", sans-serif;
     font-size: 16px;
     font-weight: 700;
-    line-height: 21.28px;
+
     background-color: #333333;
-    color:#efeee8;
+    color: #efeee8;
     cursor: pointer;
+    &:hover {
+      background-color: rgb(107, 107, 40);
+      color: #131010;
     }
   }
 }
