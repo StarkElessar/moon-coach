@@ -254,49 +254,47 @@ body {
 }
 //
 
-.about__body {
-  margin-top: 176px;
-}
 [class*="__bigfont"] {
   h2 {
     padding-bottom: 28px;
     @include bigFont;
   }
 }
-.body-about__bigfont p {
+.portfolio__bigfont p {
   max-width: 634px;
 }
-.body-about__images {
-  margin-top: 43px;
-}
-.image-body {
-  &__section {
+
+.portfolio {
+  margin-top: 176px;
+  &__block {
+    margin-top: 43px;
     display: flex;
     justify-content: space-between;
     font-size: 16px;
+    
   }
-}
-.one-image {
-  
-  background-color: #e4e2d3;
-  max-width: 392px;
-  min-height: 358px;
-  padding: 24px 24px 0 24px;
-  
+ 
+  &__item {
+    background-color: #e4e2d3;
+    max-width: 392px;
+    min-height: 358px;
+    padding: 24px 24px 30px 24px;
+  }
 
   &__image {
-    
     width: 100%;
-    margin-bottom: 22px;
   }
   &__text {
-    
-      &:after {
-    content: "\2014";
-    padding-left: 196px;
-    
-    
-    
+    display: flex;
+    margin-top: 22px;
+    justify-content: space-between;
+
+    &::after {
+      content: "\2014";
+    }
   }
 }
+
+.portfolio__about, .portfolio__blog, .portfolio__other {
+  margin-top: 55px;
 }
