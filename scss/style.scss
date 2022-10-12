@@ -152,11 +152,12 @@ body {
 
 .about {
   padding: 100px 0;
-  background-color: #efeee8;
+  //background-color: #efeee8;
 
   @media screen and (max-width: 960px) {
     padding: 50px 0;
   }
+
   @media screen and (max-width: 500px) {
     padding: 0px 0;
   }
@@ -389,9 +390,11 @@ body {
     justify-content: center;
     @media (max-width: 900px) {
       margin: 0 10px 0 0px;
+      padding: 10px 10px 16px 10px;
     }
     @media (max-width: 600px) {
       margin: 0 0px 10px 0;
+      padding: 24px 24px 30px 24px;
     }
   }
 
@@ -430,6 +433,9 @@ body {
   @media (max-width: 500px) {
     margin-top: 55px;
   }
+  @media (max-width: 630px) {
+    background: url(/pictures/body/footer.png) 50% no-repeat;
+  }
   //display: flex;
 }
 .footer-about {
@@ -442,52 +448,69 @@ body {
   }
 }
 .footer-about__image {
-}
-.image-footer {
-  //position: relative;
-  &__image {
-    flex: 0 0 50%;
-    @media (max-width: 957px) {
-      flex: 0 0 33.333%;
-    }
-    @media (max-width: 630px) {
-      display: none;
-    }
-
-    img {
-      width: 100%;
-    }
+  flex: 0 0 50%;
+  @media (max-width: 957px) {
+    flex: 0 0 33.333%;
   }
-  &__text {
-    background: #333333;
+  @media (max-width: 630px) {
+    display: none;
+  }
+  min-height: 570px;
+  max-width: 484px;
 
-    padding: 24px;
-    max-width: 436px;
-    @media (max-width: 630px) {
-      display: none;
-    }
-    p {
-      font-family: "Libre Baskerville", sans-serif;
-      font-size: 16px;
-      color: rgba(239, 238, 232, 0.9);
-      line-height: 21.28px;
-      padding-bottom: 15px;
-    }
-    span {
-      font-family: "Reenie Beanie", sans-serif;
-      font-size: 32px;
-      font-weight: 500;
-      line-height: 40px;
-      color: #efeee8;
-    }
+  img {
+    width: 100%;
   }
 }
+.footer-about__collapse {
+  position: relative;
+}
+
+.footer-about__text {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+
+  background: #333333;
+
+  padding: 24px;
+  max-width: 436px;
+
+  @media (max-width: 630px) {
+    display: none;
+  }
+  p {
+    font-family: "Libre Baskerville", sans-serif;
+    font-size: 16px;
+    color: rgba(239, 238, 232, 0.9);
+    line-height: 21.28px;
+    padding-bottom: 15px;
+  }
+  span {
+    font-family: "Reenie Beanie", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #efeee8;
+  }
+}
+
 .footer-about__form {
   margin: 80px 0 0 54px;
   max-width: 440px;
   overflow: hidden;
+  @media (max-width: 1030px) {
+    margin-left: 20px;
+  }
+  @media (max-width: 630px) {
+    margin: 30px auto 0;
+    text-align: center;
+  }
+  @media (max-width: 400px) {
+    margin-top: 15px;
+  }
 
-  legend {
+  .footer-about__bigfont {
     @include bigFont;
     max-width: 429px;
   }
@@ -496,6 +519,9 @@ body {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
+    @media (max-width: 900px) {
+      margin-top: 0;
+    }
     li {
       list-style: none;
       padding: 15px 0 0 0px;
@@ -503,29 +529,44 @@ body {
       font-family: "Libre Baskerville", sans-serif;
       font-size: 16px;
       line-height: 21.28px;
+      @media (max-width: 460px) {
+        padding: 10px;
+      }
     }
     input {
-      width: 440px;
+      width: 100%;
+      object-fit: cover;
       height: 55px;
       padding-left: 34px;
       background-color: #efeee8;
+      @media (max-width: 460px) {
+        height: 30px;
+      }
+      @media (max-width: 630px) {
+        background: url(/pictures/body/footer.png);
+      }
     }
     button {
       background-color: #333333;
       height: 52px;
-      width: 440px;
+      width: 100%;
       color: #efeee8;
       padding: 15px 164px;
       margin-top: 40px;
+      margin-bottom: 40px;
       cursor: pointer;
-
       font-family: "Libre Baskerville", sans-serif;
       font-size: 16px;
       font-weight: 700;
-
       background-color: #333333;
       color: #efeee8;
       cursor: pointer;
+      @media (max-width: 950px) {
+        padding: 15px 85px;
+      }
+      @media (max-width: 450px) {
+        font-size: 14px;
+      }
       &:hover {
         background-color: rgb(107, 107, 40);
         color: #131010;
