@@ -1,7 +1,7 @@
 .header {
   background-color: $headerBgColor;
   border-bottom: 1px solid $borderColor;
-  overflow: hidden;
+  
   //padding: 0 52px;
  //max-width: 1440px;
   
@@ -36,6 +36,7 @@
     justify-content: flex-end;
     align-items: center;
     list-style: none;
+    // @include adaptiveClamp('gap', 31, 15, 1400, 768, 1);
     @media (max-width: 1024.98px) {
       gap: 15px;
     }

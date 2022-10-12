@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "variables";
 @import "mixins";
 
@@ -21,10 +23,12 @@ body {
 
 .wrapper {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: $headerBgColor;
   margin: 0 auto;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 [class*="__container"] {
@@ -32,7 +36,6 @@ body {
 
   margin: 0 auto;
   padding: 0 15px;
-  
 }
 
 .page {
@@ -45,7 +48,7 @@ body {
     padding: 40px 0;
   }
   @media screen and (max-width: 500px) {
-    padding-bottom: 5px;
+    padding: 15px 0 0 0;
   }
 }
 
@@ -134,6 +137,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
+  
 
   img {
     max-width: 100%;
@@ -154,6 +158,9 @@ body {
   @media screen and (max-width: 960px) {
     padding: 50px 0;
   }
+  @media screen and (max-width: 500px) {
+    padding: 0px 0;
+  }
   &__container {
   }
 }
@@ -167,10 +174,10 @@ body {
     @media screen and (max-width: 957px) {
       flex: 0 0 33.333%;
     }
-    //@media screen and (max-width: 630px) {
-      //display: none;
-    //}
-    
+    @media screen and (max-width: 630px) {
+      display: none;
+    }
+
     img {
       object-fit: cover;
       width: 100%;
@@ -178,7 +185,6 @@ body {
       top: 0;
       left: 0;
       height: 100%;
-      
     }
   }
   &__text {
@@ -187,16 +193,29 @@ body {
     @media screen and (max-width: 1030px) {
       margin-left: 20px;
     }
-    @media screen and (max-width: 768px) {
-      margin-left: 5px;
+    @media screen and (max-width: 630px) {
+      margin-left: auto;
     }
   }
 }
 .text-block {
+  @media (max-width: 630px) {
+    padding-left: 5px;
+  }
   &__bigfont {
     h2 {
       padding-bottom: 28px;
       @include bigFont;
+    }
+    p {
+      @media (max-width: 500px) {
+        font-size: 15px;
+        
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 14px;
+        
+      }
     }
   }
 
@@ -217,6 +236,13 @@ body {
     display: block;
     max-width: 507px;
     font-size: 16px;
+    @media (max-width: 500px) {
+      font-size: 13px;
+    }
+    @media screen and (max-width: 400px) {
+      font-size: 12px;
+      
+    }
   }
   &__first {
     padding: 16px 0;
@@ -247,6 +273,25 @@ body {
   padding: 14px 24px;
   background-color: $borderColor;
   cursor: pointer;
+  @media (max-width: 500px) {
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 12px 21px;
+    font-size: 15px;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 12px 17px;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 380px) {
+    padding: 10px 11px;
+    font-size: 12px;
+    
+  }
+  
   a {
     color: #efeee8;
     text-decoration: none;
@@ -255,6 +300,10 @@ body {
       content: " \2192";
       padding-left: 35px;
       color: #efeee8;
+      @media  (max-width: 425px) {
+        padding-left: 20px;
+      }
+      
     }
   }
   &:hover {
@@ -267,23 +316,58 @@ body {
   h2 {
     padding-bottom: 28px;
     @include bigFont;
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 596px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 28px;
+    }
+    @media screen and (max-width: 420px) {
+      font-size: 25px;
+    }
+    @media screen and (max-width: 358px) {
+      font-size: 20px;
+    }
   }
 }
 .portfolio__bigfont p {
   max-width: 634px;
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 13px;
+  }
+  @media screen and (max-width: 430px) {
+    font-size: 12px;
+  }
 }
+
 
 .portfolio {
   margin-top: 176px;
+  @media (max-width: 1024px) {
+    margin-top: 100px;
+  }
+  @media (max-width: 500px) {
+    margin-top: 70px;
+  }
+
   &__block {
     margin-top: 43px;
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(51, 51, 51, 0.1);
     display: flex;
-    flex: 0 1 auto;
-    flex-wrap: wrap;
+    //flex: 0 1 auto;
+    //flex-wrap: wrap;
     //justify-content: space-between;
     font-size: 16px;
+    @media (max-width: 500) {
+      font-size: 14px;
+    }
     //max-width: 1240px;
   }
   .last {
@@ -294,13 +378,16 @@ body {
   &__item {
     background-color: #e4e2d3;
     max-width: 392px;
-    min-height: 358px;
+    max-height: 358px;
     padding: 24px 24px 30px 24px;
-    //display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
   }
 
   &__image {
-    width: 100%;
+    max-width: 100%;
   }
   &__text {
     display: flex;
