@@ -137,7 +137,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
-  
 
   img {
     max-width: 100%;
@@ -210,11 +209,9 @@ body {
     p {
       @media (max-width: 500px) {
         font-size: 15px;
-        
       }
       @media screen and (max-width: 400px) {
         font-size: 14px;
-        
       }
     }
   }
@@ -241,7 +238,6 @@ body {
     }
     @media screen and (max-width: 400px) {
       font-size: 12px;
-      
     }
   }
   &__first {
@@ -289,9 +285,8 @@ body {
   @media screen and (max-width: 380px) {
     padding: 10px 11px;
     font-size: 12px;
-    
   }
-  
+
   a {
     color: #efeee8;
     text-decoration: none;
@@ -300,10 +295,9 @@ body {
       content: " \2192";
       padding-left: 35px;
       color: #efeee8;
-      @media  (max-width: 425px) {
+      @media (max-width: 425px) {
         padding-left: 20px;
       }
-      
     }
   }
   &:hover {
@@ -346,7 +340,6 @@ body {
   }
 }
 
-
 .portfolio {
   margin-top: 176px;
   @media (max-width: 1024px) {
@@ -358,41 +351,70 @@ body {
 
   &__block {
     margin-top: 43px;
+    
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(51, 51, 51, 0.1);
     display: flex;
-    //flex: 0 1 auto;
+    @media (max-width:600px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    }
     //flex-wrap: wrap;
     //justify-content: space-between;
-    font-size: 16px;
-    @media (max-width: 500) {
-      font-size: 14px;
-    }
-    //max-width: 1240px;
-  }
+    
+   
+  
   .last {
     border-bottom: none;
     padding-bottom: 0;
+    margin-top: 20px;
+    @media (max-width:900px) {
+      margin-top: 10px;
+    }
+    @media (max-width:600px) {
+      margin: 0 ;
+    }
   }
 
   &__item {
     background-color: #e4e2d3;
     max-width: 392px;
     max-height: 358px;
+    overflow: hidden;
+    
+    margin: 0 20px 0 0px;
     padding: 24px 24px 30px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    @media (max-width:900px) {
+      margin: 0 10px 0 0px;
+    }
+    @media (max-width:600px) {
+      margin: 0 0px 10px 0;
+    }
+   
   }
 
   &__image {
-    max-width: 100%;
+    
+    img {
+      max-width: 100%;
+      
+      
+    }
   }
   &__text {
     display: flex;
     margin-top: 22px;
     justify-content: space-between;
+    font-size: 16px;
+    @media (max-width: 500px) {
+      font-size: 12px;
+    }
 
     &::after {
       content: "\2014";
