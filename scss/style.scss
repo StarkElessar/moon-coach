@@ -440,17 +440,15 @@ body {
 }
 .footer-about {
   display: flex;
-
+  
   &__section {
     margin: 0 auto;
     display: flex;
     overflow: hidden;
   }
-  &__collapse {
-    position: relative;
-  }
+  
   &__image {
-    
+    position: relative;
     flex: 0 0 50%;
     @media (max-width: 957px) {
       flex: 0 0 33.333%;
@@ -472,10 +470,16 @@ body {
     position: absolute;
     bottom: 24px;
     left: 24px;
+    right: 24px;
     background: #333333;
     padding: 24px;
     max-width: 436px;
-
+    @media (max-width: 960px) {
+      padding: 14px;
+      bottom: 14px;
+    left: 14px;
+    right: 14px;
+    }
     @media (max-width: 630px) {
       display: none;
     }
@@ -485,6 +489,14 @@ body {
       color: rgba(239, 238, 232, 0.9);
       line-height: 21.28px;
       padding-bottom: 15px;
+      @media (max-width: 960px) {
+        font-size: 13px;
+        padding-bottom: 5px;
+      }
+      @media (max-width: 860px) {
+        font-size: 11px;
+       
+      }
     }
     span {
       font-family: "Reenie Beanie", sans-serif;
@@ -492,6 +504,10 @@ body {
       font-weight: 500;
       line-height: 40px;
       color: #efeee8;
+      @media (max-width: 960px) {
+        font-size: 20px;
+        line-height: 20px;
+      }
     }
   }
 
