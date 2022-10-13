@@ -474,7 +474,7 @@ body {
     background: #333333;
     padding: 24px;
     max-width: 436px;
-    width: 100%;
+    width: calc(100% - 20px);
     @media (max-width: 960px) {
       padding: 14px;
       
