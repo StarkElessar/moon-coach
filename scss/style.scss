@@ -440,13 +440,13 @@ body {
 }
 .footer-about {
   display: flex;
-  
+
   &__section {
     margin: 0 auto;
     display: flex;
     overflow: hidden;
   }
-  
+
   &__image {
     position: relative;
     flex: 0 0 50%;
@@ -468,17 +468,16 @@ body {
 
   &__text {
     position: absolute;
-    bottom: 24px;
-    left: 24px;
-    right: 24px;
+    bottom:24px;
+    left: 50%;
+    transform: translateX(-50%);
     background: #333333;
     padding: 24px;
     max-width: 436px;
+    width: 100%;
     @media (max-width: 960px) {
       padding: 14px;
-      bottom: 14px;
-    left: 14px;
-    right: 14px;
+      
     }
     @media (max-width: 630px) {
       display: none;
@@ -495,7 +494,6 @@ body {
       }
       @media (max-width: 860px) {
         font-size: 11px;
-       
       }
     }
     span {
@@ -589,4 +587,9 @@ body {
       }
     }
   }
+}
+.footer {
+  background-color: #E4E2D3;
+  border-top: 1px solid #333333;
+  padding-top: 80px;
 }
