@@ -36,9 +36,13 @@
     justify-content: flex-end;
     align-items: center;
     list-style: none;
+    
     // @include adaptiveClamp('gap', 31, 15, 1400, 768, 1);
     @media (max-width: 1024.98px) {
       gap: 15px;
+    }
+    li {
+      position: relative;
     }
   }
 
@@ -48,13 +52,14 @@
     font-size: 15px;
     &:hover {
       color: red;
+      
     }
     img {
       padding-left: 4px;
     }
   }
   &__item {
-    display: flex;
+    display: flex; 
     &_four {
       margin-right: 8px;
     }
@@ -71,3 +76,34 @@
     }
   }
 }
+.sub-menu__item {
+  display: none;
+  position: absolute;
+  top:10px;
+  left:0px;
+  list-style: none;
+  padding-top: 20px;
+  font-size: 15px;
+  
+  width: 100%;
+  li {
+    padding-bottom: 10px;
+    background-color:rgb(218, 224, 230) ;
+    //border: 1px solid #222;
+  }
+  a{
+  text-decoration: none;
+  color: $borderColor;
+  
+  &:hover {
+    color: blue;
+  }
+  }
+  
+}
+.menu__list>li:hover .sub-menu__item {
+  
+    display: block;
+    text-align: center;
+  }
+
