@@ -605,24 +605,56 @@ body {
     margin-top: 80px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 720px) {
+      flex-direction: column;
+      margin-top: 40px;
+    }
   }
   &__text {
     width: 400px;
     font-family: "Libre Baskerville", sans-serif;
     font-size: 22px;
+    @media (max-width: 1034px) {
+      font-size: 20px;
+    }
+    @media (max-width: 890px) {
+      font-size: 17px;
+    }
+    @media (max-width: 890px) {
+      flex: 0 0 33.333%;
+    }
+    @media (max-width: 720px) {
+      width: 100%;
+    }
   }
   &__menu {
     display: flex;
-
+    @media (max-width: 720px) {
+      display: none;
+    }
     //flex-direction: column;
   }
   &__list {
     margin-left: 80px;
     list-style: none;
+    @media (max-width: 1034px) {
+      margin-left: 40px;
+    }
+    @media (max-width: 720px) {
+      margin: 20px 40px 0 0;
+    }
+
     li {
       line-height: 20px;
       font-size: 16px;
       padding-bottom: 24px;
+      @media (max-width: 1034px) {
+        padding-bottom: 18px;
+      }
+      @media (max-width: 890px) {
+        font-size: 14px;
+        padding-bottom: 15px;
+      }
       &:first-child {
         font-weight: 700;
       }
@@ -634,7 +666,7 @@ body {
   &__end {
     padding-top: 33px;
     padding-bottom: 19px;
-    font-family: 'libre Baskerville', sans-serif;
+    font-family: "libre Baskerville", sans-serif;
     font-size: 14px;
     img {
       padding: 0 8px;
@@ -649,5 +681,49 @@ body {
         color: green;
       }
     }
+  }
+  &__mobile {
+    @media (min-width: 720px) {
+      display: none;
+    }
+    @media (max-width: 720px) {
+      //display: flex;
+      margin-top: 20px;
+    }
+  }
+}
+.mobile {
+  &__menu {
+    //display: flex;
+    li {
+      list-style: none;
+      position: relative;
+    }
+    a {
+      text-decoration: none;
+    }
+  
+  }
+  &__menu>li:hover, &__menu-sub {
+    display: block;
+  }
+  &__link {
+    //display: flex;
+    color: red;
+  }
+
+  &__menu-sub {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background-color: #fcfbf8;
+
+    a {
+      color: #333333;
+    }
+  }
+  &__link-sub {
+    
   }
 }
