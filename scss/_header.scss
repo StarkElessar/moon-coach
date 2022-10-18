@@ -115,6 +115,7 @@
     height: 20px;
     z-index: 3;
     cursor: pointer;
+    background: transparent;
 
     &:before,
     &:after {
@@ -210,6 +211,4 @@
     }
   }
 }
-/*.header__burger.active::before {
-transform: rotate(45deg) ;
-}*/
+}
