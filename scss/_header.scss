@@ -52,6 +52,13 @@
     font-size: 15px;
     &:hover {
       color: red;
+      & .sub-menu__list {
+        display: block;
+        text-align: center;
+        @media (max-width: 767px) {
+          display: none;
+        }
+    }
     }
     img {
       padding-left: 4px;
@@ -96,16 +103,10 @@
 
     &:hover {
       color: blue;
-    }
+     
   }
 }
-.menu__item:hover .sub-menu__list {
-  display: block;
-  text-align: center;
-  @media (max-width: 767px) {
-    display: none;
-  }
-}
+
 @media (max-width: 767px) {
   .header__burger {
     display: block;
